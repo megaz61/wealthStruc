@@ -2,7 +2,7 @@
 
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { Quote, Star } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"; // Assuming I might need this, but sticking to standard img for simplicity
+
 
 export default function Testimonials() {
     const testimonials = [
