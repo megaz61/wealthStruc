@@ -14,7 +14,7 @@
   --color-card-foreground: #ffffff;
 
   --font-sans: var(--font-plus-jakarta-sans), sans-serif;
-  --font-body: var(--font-nunito), sans-serif;
+  --font-body: var(--font-plus-jakarta-sans), sans-serif;
   
   --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
@@ -50,6 +50,19 @@
     .container-custom {
       padding-inline: 24px;
     }
+  }
+
+  /* Partner Logos - Strict Styling */
+  .partner-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1) opacity(0.8);
+    transition: opacity 0.3s ease;
+  }
+
+  .partner-logo:hover {
+    opacity: 1;
   }
 }
 

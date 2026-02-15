@@ -63,7 +63,7 @@ export default function Services() {
         <SectionWrapper id="services" className="bg-background">
             <div className="flex flex-wrap items-end justify-between mb-12 gap-6">
                 <div className="max-w-xl">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-tighter">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter">
                         Find Your Perfect <br /> Financial Strategy
                     </h2>
                 </div>

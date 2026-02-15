@@ -8,15 +8,17 @@ export default function Testimonials() {
     const testimonials = [
         {
             quote: "WealthStruc has been fantastic for my business finances. It's fast, reliable, and the support is top-notch. My assets grew quickly.",
-            author: "Caitlyn King",
+            author: "Caitlyn Queen",
             role: "Business Specialist",
-            rating: 5
+            rating: 5,
+            image: "/Caitlyn Queen.jpeg"
         },
         {
             quote: "The strategic approach to tax optimization saved me significantly this year. Highly professional and knowledgeable team.",
             author: "Marcus Davis",
             role: "Tech Entrepreneur",
-            rating: 5
+            rating: 5,
+            image: "/Marcus Davis.jpeg"
         }
     ];
 
@@ -24,7 +26,7 @@ export default function Testimonials() {
         <SectionWrapper className="py-20">
             <div className="flex flex-col md:flex-row gap-12 items-center justify-between">
                 <div className="max-w-lg">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 uppercase">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6">
                         What Our <br /> Clients Said
                     </h2>
                     <p className="text-muted-foreground mb-8">
@@ -46,10 +48,12 @@ export default function Testimonials() {
                             </p>
 
                             <div className="flex items-center gap-4 mt-auto">
-                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-blue-500 p-[2px]">
-                                    <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-xs font-bold text-white uppercase">
-                                        {item.author.charAt(0)}
-                                    </div>
+                                <div className="w-12 h-12 rounded-full p-[2px] bg-gradient-to-br from-primary to-blue-500">
+                                    <img
+                                        src={item.image}
+                                        alt={item.author}
+                                        className="w-full h-full rounded-full object-cover border-2 border-black"
+                                    />
                                 </div>
                                 <div>
                                     <p className="font-bold text-white text-sm">{item.author}</p>

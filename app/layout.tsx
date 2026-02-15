@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Nunito } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta-sans",
-  display: "swap",
-});
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  variable: "--font-nunito",
   display: "swap",
 });
 
@@ -29,8 +23,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={cn(
         "min-h-screen bg-background font-body antialiased",
-        plusJakartaSans.variable,
-        nunito.variable
+        plusJakartaSans.variable
       )}>
         {children}
       </body>

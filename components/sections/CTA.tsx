@@ -60,7 +60,7 @@ export default function CTA() {
                                 <li className="flex gap-2">✓ 24/7 Priority Support</li>
                                 <li className="flex gap-2">✓ Private Equity Access</li>
                             </ul>
-                            <Button className="w-full bg-transparent border border-white/20 text-white hover:bg-white/10 rounded-xl">Contact Us</Button>
+                            <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-xl">Contact Us</Button>
                         </div>
                     </div>
                 </div>
