@@ -23,29 +23,44 @@ export default function CTA() {
                         By signing up now, you&apos;ll get access to a free initial consultation and a roadmap to wealth.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                        <div className="bg-black/90 p-8 rounded-3xl text-white w-full sm:w-72 flex flex-col items-center shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 border border-white/10">
-                            <span className="text-sm text-gray-400 mb-2">Standard Consultation</span>
-                            <span className="text-4xl font-bold mb-6">$0.00</span>
-                            <ul className="text-sm space-y-3 mb-8 text-gray-300 text-left w-full">
-                                <li className="flex gap-2">✓ 30 Min Call</li>
+                    <div className="grid md:grid-cols-3 gap-6 justify-center">
+                        {/* Starter Card */}
+                        <div className="bg-black/90 p-8 rounded-3xl text-white flex flex-col items-center shadow-lg border border-white/10 hover:border-primary/50 transition-all duration-300">
+                            <span className="text-sm text-gray-400 mb-2">Starter</span>
+                            <span className="text-3xl font-bold mb-6">Free</span>
+                            <ul className="text-sm space-y-3 mb-8 text-gray-300 text-left w-full flex-grow">
+                                <li className="flex gap-2">✓ Initial Consultation</li>
                                 <li className="flex gap-2">✓ Portfolio Review</li>
-                                <li className="flex gap-2">✓ Risk Assessment</li>
+                                <li className="flex gap-2">✓ Basic Risk Assessment</li>
                             </ul>
                             <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-xl">Book Now</Button>
                         </div>
 
-                        <div className="bg-white p-8 rounded-3xl text-black w-full sm:w-72 flex flex-col items-center shadow-2xl transform scale-105 border-4 border-black/5">
-                            <span className="bg-black text-white text-xs py-1 px-3 rounded-full mb-2">Most Popular</span>
-                            <span className="text-sm text-gray-600 mb-2">Full Strategy Plan</span>
-                            <span className="text-4xl font-bold mb-6">$149.00</span>
-                            <ul className="text-sm space-y-3 mb-8 text-gray-600 text-left w-full">
-                                <li className="flex gap-2">✓ 90 Min Session</li>
-                                <li className="flex gap-2">✓ Custom Roadmap</li>
-                                <li className="flex gap-2">✓ Tax Strategy</li>
-                                <li className="flex gap-2">✓ 1-Year Support</li>
+                        {/* Growth Card (Highlighted) */}
+                        <div className="bg-white p-8 rounded-3xl text-black flex flex-col items-center shadow-2xl transform scale-105 border-4 border-black/5 relative z-10">
+                            <span className="absolute -top-3 bg-black text-white text-xs py-1 px-3 rounded-full">Most Popular</span>
+                            <span className="text-sm font-bold text-gray-600 mb-2">Growth</span>
+                            <span className="text-4xl font-bold mb-6">$149<span className="text-lg font-normal text-gray-500">/mo</span></span>
+                            <ul className="text-sm space-y-3 mb-8 text-gray-600 text-left w-full flex-grow">
+                                <li className="flex gap-2">✓ Comprehensive Strategy</li>
+                                <li className="flex gap-2">✓ Tax Optimization</li>
+                                <li className="flex gap-2">✓ Quarterly Reviews</li>
+                                <li className="flex gap-2">✓ Dedicated Advisor</li>
                             </ul>
                             <Button className="w-full bg-[#02df82] text-black hover:bg-[#02b368] rounded-xl shadow-lg">Get Started</Button>
+                        </div>
+
+                        {/* Wealth Card */}
+                        <div className="bg-black/90 p-8 rounded-3xl text-white flex flex-col items-center shadow-lg border border-white/10 hover:border-primary/50 transition-all duration-300">
+                            <span className="text-sm text-gray-400 mb-2">Wealth</span>
+                            <span className="text-3xl font-bold mb-6">$299<span className="text-lg font-normal text-gray-500">/mo</span></span>
+                            <ul className="text-sm space-y-3 mb-8 text-gray-300 text-left w-full flex-grow">
+                                <li className="flex gap-2">✓ Family Office Services</li>
+                                <li className="flex gap-2">✓ Estate Planning</li>
+                                <li className="flex gap-2">✓ 24/7 Priority Support</li>
+                                <li className="flex gap-2">✓ Private Equity Access</li>
+                            </ul>
+                            <Button className="w-full bg-transparent border border-white/20 text-white hover:bg-white/10 rounded-xl">Contact Us</Button>
                         </div>
                     </div>
                 </div>

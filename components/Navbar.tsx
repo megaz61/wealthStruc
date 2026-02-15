@@ -33,8 +33,8 @@ export default function Navbar() {
                 isScrolled ? "bg-background/80 backdrop-blur-md py-4 border-b border-white/5" : "bg-transparent py-6"
             )}
         >
-            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
+            <div className="container-custom flex items-center justify-between">
+                <Link href="/" className="text-2xl font-bold tracking-tighter text-white mr-auto">
                     Wealth<span className="text-primary">Struc</span>.
                 </Link>
 

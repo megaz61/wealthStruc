@@ -11,6 +11,12 @@ export default function Testimonials() {
             author: "Caitlyn King",
             role: "Business Specialist",
             rating: 5
+        },
+        {
+            quote: "The strategic approach to tax optimization saved me significantly this year. Highly professional and knowledgeable team.",
+            author: "Marcus Davis",
+            role: "Tech Entrepreneur",
+            rating: 5
         }
     ];
 
@@ -26,39 +32,32 @@ export default function Testimonials() {
                     </p>
                 </div>
 
-                <div className="flex-1 w-full relative">
+                <div className="grid md:grid-cols-2 gap-6">
                     {testimonials.map((item, index) => (
-                        <div key={index} className="relative p-8 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-sm">
-                            <div className="flex gap-1 text-primary mb-4">
+                        <div key={index} className="relative p-8 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-sm hover:bg-white/[0.05] transition-colors">
+                            <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10 fill-primary/10" />
+                            <div className="flex gap-1 text-primary mb-6">
                                 {[...Array(item.rating)].map((_, i) => (
                                     <Star key={i} className="w-4 h-4 fill-primary" />
                                 ))}
                             </div>
-                            <Quote className="w-8 h-8 text-primary/20 mb-4 fill-current" />
-                            <p className="text-xl text-white/90 mb-8 leading-relaxed font-light">
+                            <p className="text-base text-white/80 mb-6 leading-relaxed font-light italic">
                                 &quot;{item.quote}&quot;
                             </p>
 
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-4 mt-auto">
                                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-blue-500 p-[2px]">
-                                    <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-xs font-bold">
+                                    <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-xs font-bold text-white uppercase">
                                         {item.author.charAt(0)}
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-white">{item.author}</p>
+                                    <p className="font-bold text-white text-sm">{item.author}</p>
                                     <p className="text-xs text-muted-foreground">{item.role}</p>
                                 </div>
                             </div>
                         </div>
                     ))}
-
-                    {/* Pagination Dummies */}
-                    <div className="flex gap-2 mt-8 justify-end">
-                        <div className="w-8 h-1 bg-primary rounded-full" />
-                        <div className="w-2 h-1 bg-white/20 rounded-full" />
-                        <div className="w-2 h-1 bg-white/20 rounded-full" />
-                    </div>
                 </div>
             </div>
         </SectionWrapper>

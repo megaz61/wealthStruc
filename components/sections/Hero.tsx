@@ -14,7 +14,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-grid-pattern opacity-20" />
             </div>
 
-            <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center text-center">
+            <div className="container-custom relative z-10 flex flex-col items-center text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

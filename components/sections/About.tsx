@@ -49,36 +49,33 @@ export default function About() {
                 </motion.div>
 
                 {/* Right Column: 3D Visual */}
+                {/* Right Column: Realistic Image */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="relative h-[400px] md:h-[500px] w-full"
+                    className="relative h-[400px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group"
                 >
-                    {/* Placeholder for 3D Building/Structure */}
-                    <div className="w-full h-full bg-gradient-to-br from-white/5 to-transparent rounded-3xl border border-white/10 relative overflow-hidden flex items-center justify-center group">
-                        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+                    {/* Image */}
+                    <div className="absolute inset-0 bg-gray-900">
+                        {/* If generation works, this will be replaced. If not, using a high-quality Unsplash source as fallback/placeholder for "Realistic Image" */}
+                        <img
+                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
+                            alt="Financial Consultation"
+                            className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    </div>
 
-                        {/* Abstract Building Blocks */}
-                        <div className="relative z-10 w-40 h-64 bg-gradient-to-b from-primary/20 to-primary/5 rounded-lg border border-primary/20 backdrop-blur-md transform -rotate-12 translate-x-[-20px] group-hover:-translate-y-4 transition-transform duration-500" />
-                        <div className="relative z-20 w-48 h-56 bg-gradient-to-b from-white/10 to-transparent rounded-lg border border-white/10 backdrop-blur-xl transform rotate-6 translate-x-[20px] shadow-2xl group-hover:translate-y-4 transition-transform duration-500 flex flex-col justify-between p-4">
-                            <div className="w-8 h-8 rounded-full bg-primary mb-4 animate-pulse" />
-                            <div className="space-y-2">
-                                <div className="w-full h-2 bg-white/20 rounded-full" />
-                                <div className="w-2/3 h-2 bg-white/20 rounded-full" />
-                            </div>
+                    {/* Floating Badge */}
+                    <div className="absolute bottom-8 left-8 glass-card p-4 rounded-xl flex items-center gap-3 z-30 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                        <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-[0_0_20px_rgba(2,223,130,0.4)]">
+                            <CheckCircle className="w-6 h-6 text-black" />
                         </div>
-
-                        {/* Floating Badge */}
-                        <div className="absolute bottom-6 left-6 glass-card p-4 rounded-xl flex items-center gap-3 z-30 animate-bounce" style={{ animationDuration: '3s' }}>
-                            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                                <CheckCircle className="w-5 h-5 text-black" />
-                            </div>
-                            <div>
-                                <div className="font-bold text-sm">Powerful Strategy</div>
-                                <div className="text-xs text-muted-foreground">Proven Results</div>
-                            </div>
+                        <div>
+                            <div className="font-bold text-white text-base">Trusted Advisors</div>
+                            <div className="text-xs text-primary/80">100% Client Focus</div>
                         </div>
                     </div>
                 </motion.div>
