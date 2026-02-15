@@ -66,13 +66,18 @@
   }
 }
 
-/* Base styles */
-body {
-  color: var(--color-foreground);
-  background: var(--color-background);
-  font-family: var(--font-body);
-}
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  
+  body {
+    color: var(--color-foreground);
+    background: var(--color-background);
+    font-family: var(--font-plus-jakarta-sans), sans-serif;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sans);
+  h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea {
+    font-family: var(--font-plus-jakarta-sans), sans-serif;
+  }
 }
