@@ -12,8 +12,11 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Services() {
+    // ... (start of component remains the same, just adding import)
+
     const services = [
         {
             icon: TrendingUp,
@@ -86,24 +89,26 @@ export default function Services() {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <Card className="h-full p-6 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-primary/50 transition-all duration-300 group relative overflow-hidden">
-                            {/* Reference style: content is minimal and punchy */}
-                            <div className="flex justify-between items-start mb-4">
-                                <div className="p-3 rounded-xl bg-white/5 text-primary group-hover:scale-110 transition-transform duration-300">
-                                    <service.icon className="w-6 h-6" />
+                        <Link href="/coming-soon" className="block h-full">
+                            <Card className="h-full p-6 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-primary/50 transition-all duration-300 group relative overflow-hidden">
+                                {/* Reference style: content is minimal and punchy */}
+                                <div className="flex justify-between items-start mb-4">
+                                    <div className="p-3 rounded-xl bg-white/5 text-primary group-hover:scale-110 transition-transform duration-300">
+                                        <service.icon className="w-6 h-6" />
+                                    </div>
+                                    <span className="text-xs font-medium px-2 py-1 rounded border border-white/10 text-white/50">{service.tag}</span>
                                 </div>
-                                <span className="text-xs font-medium px-2 py-1 rounded border border-white/10 text-white/50">{service.tag}</span>
-                            </div>
 
-                            <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
-                            <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                                {service.description}
-                            </p>
+                                <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
+                                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                                    {service.description}
+                                </p>
 
-                            <div className="flex items-center text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                Learn More →
-                            </div>
-                        </Card>
+                                <div className="flex items-center text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+                                    Learn More →
+                                </div>
+                            </Card>
+                        </Link>
                     </motion.div>
                 ))}
             </div>

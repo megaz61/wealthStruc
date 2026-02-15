@@ -19,11 +19,11 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "About", href: "#about" },
-        { name: "Services", href: "#services" },
-        { name: "Process", href: "#process" },
-        { name: "Results", href: "#portfolio" },
-        { name: "Team", href: "#team" },
+        { name: "About", href: "/coming-soon" },
+        { name: "Services", href: "/coming-soon" },
+        { name: "Process", href: "/coming-soon" },
+        { name: "Results", href: "/coming-soon" },
+        { name: "Team", href: "/coming-soon" },
     ];
 
     return (
@@ -49,9 +49,11 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <Button size="sm" variant="primary">
-                        Get Consultation
-                    </Button>
+                    <Link href="/coming-soon">
+                        <Button size="sm" variant="primary">
+                            Get Consultation
+                        </Button>
+                    </Link>
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -75,7 +77,9 @@ export default function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Button className="w-full">Get Consultation</Button>
+                        <Link href="/coming-soon" className="w-full">
+                            <Button className="w-full">Get Consultation</Button>
+                        </Link>
                     </div>
                 )}
             </div>

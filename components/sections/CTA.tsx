@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
@@ -33,7 +34,9 @@ export default function CTA() {
                                 <li className="flex gap-2">✓ Portfolio Review</li>
                                 <li className="flex gap-2">✓ Basic Risk Assessment</li>
                             </ul>
-                            <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-xl">Book Now</Button>
+                            <Link href="/coming-soon" className="w-full">
+                                <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-xl">Book Now</Button>
+                            </Link>
                         </div>
 
                         {/* Growth Card (Highlighted) */}
@@ -47,7 +50,9 @@ export default function CTA() {
                                 <li className="flex gap-2">✓ Quarterly Reviews</li>
                                 <li className="flex gap-2">✓ Dedicated Advisor</li>
                             </ul>
-                            <Button className="w-full bg-[#02df82] text-black hover:bg-[#02b368] rounded-xl shadow-lg">Get Started</Button>
+                            <Link href="/coming-soon" className="w-full">
+                                <Button className="w-full bg-[#02df82] text-black hover:bg-[#02b368] rounded-xl shadow-lg">Get Started</Button>
+                            </Link>
                         </div>
 
                         {/* Wealth Card */}
@@ -60,7 +65,9 @@ export default function CTA() {
                                 <li className="flex gap-2">✓ 24/7 Priority Support</li>
                                 <li className="flex gap-2">✓ Private Equity Access</li>
                             </ul>
-                            <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-xl">Contact Us</Button>
+                            <Link href="/coming-soon" className="w-full">
+                                <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-xl">Contact Us</Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

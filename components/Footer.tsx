@@ -15,7 +15,7 @@ export default function Footer() {
                         </p>
                         <div className="flex gap-4">
                             {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                                <Link key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-colors">
+                                <Link key={i} href="/coming-soon" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-colors">
                                     <Icon className="w-5 h-5" />
                                 </Link>
                             ))}
@@ -27,7 +27,7 @@ export default function Footer() {
                         <ul className="space-y-4">
                             {["About Us", "Services", "Our Process", "Case Studies", "Contact"].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                                    <Link href="/coming-soon" className="text-muted-foreground hover:text-primary transition-colors">
                                         {item}
                                     </Link>
                                 </li>
@@ -40,7 +40,7 @@ export default function Footer() {
                         <ul className="space-y-4">
                             {["Wealth Management", "Retirement Planning", "Tax Optimization", "Estate Planning", "Business Consulting"].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                                    <Link href="/coming-soon" className="text-muted-foreground hover:text-primary transition-colors">
                                         {item}
                                     </Link>
                                 </li>
@@ -61,8 +61,8 @@ export default function Footer() {
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-muted-foreground">
                     <p>© 2026 Financial Consultation Service. All rights reserved.</p>
                     <div className="flex gap-8">
-                        <Link href="#" className="hover:text-white">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white">Terms of Service</Link>
+                        <Link href="/coming-soon" className="hover:text-white">Privacy Policy</Link>
+                        <Link href="/coming-soon" className="hover:text-white">Terms of Service</Link>
                     </div>
                 </div>
             </div>
